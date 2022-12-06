@@ -10,7 +10,8 @@ app.set('view engine', 'ejs');
 
 app.get('/', async (req, res) => {
     const allUrls = await shortUrlModel.find();
-    res.render('index', {allUrls})
+    // res.render('index', {allUrls})
+    res.send("Welcome")
 })
 
 app.post('/short-urls', async (req, res) => {
