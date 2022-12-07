@@ -1,0 +1,101 @@
+.container{
+    background-color: black;
+    color: white;
+    padding: 50px;
+    margin: 50px auto ;
+    width: 70%;
+    font-family: monospace;
+    text-align: center;
+}
+.container h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form{
+    font-size: 16pt;
+    margin-bottom: 20px;
+}
+.info p{
+    font-size: 16pt;
+}
+.details p{
+    font-size: 16pt;
+}
+.container label, .container input{
+    display: block;
+    margin: 10px auto;
+}
+#full-url{
+    height: 20px;
+    width: 50%;
+    padding: 10px;
+    font-size: 14pt;
+}
+.btn{
+    font-family: monospace;
+    font-size: 14pt;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.btn:hover{
+    box-shadow: 5px 5px 5px grey;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: aqua;
+}
+
+
+.find-details{
+    margin: 50px auto;
+    width: 70%;
+}
+.find-details h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.find-details{
+    font-family: monospace;
+}
+.inline-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#shorturl{
+    height: 10px;
+    width: 50%;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+
+
+
+@media (max-width: 768px) {
+    #full-url{
+        width: 100%;
+        font-size: 14pt;
+    }
+    .btn{
+        font-size: 16pt;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px grey;
+        padding: 5px 10px;
+    }
+    .inline-form{
+        flex-direction: column;
+    }
+    #shorturl{
+        height: 10px;
+        width: 100%;
+        padding: 10px;
+        font-size: 14pt;
+        margin-bottom: 10px;
+    }
+}

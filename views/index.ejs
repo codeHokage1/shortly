@@ -4,57 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>URL Shortener</title>
-    <style>
-        .container{
-            background-color: black;
-            color: white;
-            padding: 50px;
-            margin: 0 auto;
-            width: 70%;
-            font-family: monospace;
-            text-align: center;
-        }
-        h1{
-            font-family:Georgia, 'Times New Roman', Times, serif;
-        }
-
-        form, table{
-            font-size: 14pt;
-        }
-        form{
-            margin-bottom: 20px;
-        }
-        table{
-            border: 2px solid white;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        td, th{
-            border: 2px solid white;
-            padding: 10px;
-        }
-        #full-url{
-            height: 20px;
-            width: 50%;
-        }
-        .btn{
-            font-family: monospace;
-            font-size: 14pt;
-            cursor: pointer;
-            border-radius: 5px;
-            box-shadow: 3px 3px 3px grey;
-        }
-        .btn:hover{
-            box-shadow: 5px 5px 5px grey;
-        }
-        a{
-            color: white;
-        }
-        a:hover{
-            color: aqua;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -65,23 +16,19 @@
             <input type="submit" class="btn" value="Shorten">
         </form>  
         <hr>
-        <h2>Previously Shortened Links:</h2>  
-        <table>
-            <thead>
-                <th>Full URLs</th>
-                <th>Short URLs</th>
-                <th>Clicks</th>
-            </thead>
-            <tbody>
-                <% allUrls.forEach(url => { %>
-                    <tr>
-                      <td><a href="<%= url.fullUrl %>"><%= url.fullUrl %></a></td>
-                      <td><a href="<%= url.shortUrl %>"><%= url.shortUrl %></a></td>
-                      <td><%= url.clicks %></td>
-                    </tr>
-                <% }) %>
-            </tbody>
-        </table>    
+        <p>&copy; codeHokage 2022</p>
+    </div>
+
+    <div class="find-details">
+        <h3>Shortened a link before? Get details.</h3>
+        <form action="/short-details" method="post" id="details-form">
+            <label for="">Enter shorturl path:</label>
+            <section class="inline-form">
+                <p>shortly-88oa.onrender.com/</p>
+                <input type="text" required placeholder="e.g gi2swa1vX" name="checkShort" id="shorturl">
+            </section>
+            <input type="submit" value="Get Details" class="btn" id="details-btn">
+        </form>
     </div>
 </body>
 </html>
