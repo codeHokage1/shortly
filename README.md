@@ -7,6 +7,7 @@ Link to deployed project :link: : https://shortly-88oa.onrender.com
 With Shortly, you can:
 1. Shorten long urls and get a shorter equivalent
 2. Get details about a shortened URLS: the number of clicks
+3. Specify a custom pathname to use for your shortened URL
 
 ## Technologies Used:
 - EJS
