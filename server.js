@@ -15,10 +15,11 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/short-urls', async (req, res) => {
+    const personalDomain = req.body.domain;
     const shortUrl = shortid.generate();
     const newUrl = {
         fullUrl: req.body.fullUrl,
-        shortUrl: shortUrl
+        shortUrl: personalDomain ? personalDomain : shortUrl
     }
     await shortUrlModel.create(newUrl);
     // res.redirect('/');
